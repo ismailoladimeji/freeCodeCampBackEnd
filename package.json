@@ -2,11 +2,15 @@
 	"author": "sebastianmariani",
 	"description": "this is a test description",
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.14.0",
+		"moment": "^2.14.0"
 	},
 	"version": "1.0.0",
 	"license": "MIT",
-	"keywords": ["freecodecamp", "another keyword"],
+	"keywords": [
+		"freecodecamp",
+		"another keyword"
+	],
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"

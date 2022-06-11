@@ -2,8 +2,7 @@
 	"author": "sebastianmariani",
 	"description": "this is a test description",
 	"dependencies": {
-		"express": "^4.14.0",
-		"moment": "^2.10.2"
+		"express": "^4.14.0"
 	},
 	"version": "1.0.0",
 	"license": "MIT",

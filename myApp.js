@@ -18,7 +18,7 @@ app.get("/json", (req, res) => {
   if (secret === "uppercase") {
     response = response.toUpperCase();
   }
-  res.json({ message: response, filter: filter });
+  res.json({ message: response });
 });
 
 module.exports = app;

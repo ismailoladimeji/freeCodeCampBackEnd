@@ -6,15 +6,18 @@ require("dotenv").config();
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
+2;
 
 // this append to the file a style file
 app.use("/public", express.static(__dirname + "/public"));
 
 // this send a json file
 app.get("/json", (req, res) => {
-  let response = "Hello json";
+  let response = "";
   if (process.env.MESSAGE_STYLE === "uppercase") {
-    response = response.toUpperCase();
+    response = "HELLO JSON";
+  } else {
+    response = "Hello json";
   }
   res.json({ message: response });
 });

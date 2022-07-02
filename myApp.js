@@ -1,7 +1,6 @@
 let express = require("express");
 let app = express();
 require("dotenv").config();
-const secret = process.env[MESSAGE_STYLE];
 
 // this send a file
 app.get("/", (req, res) => {

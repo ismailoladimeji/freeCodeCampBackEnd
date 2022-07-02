@@ -14,11 +14,11 @@ app.use("/public", express.static(__dirname + "/public"));
 // this send a json file
 app.get("/json", (req, res) => {
   const mySecret = process.env["MESSAGE_STYLE"];
-  let data = { message: "Hello json" };
+  let text = "Hello json";
   if (mySecret === "uppercase") {
-    data.message = data.message.toUpperCase();
+    text = text.toUpperCase();
   }
-  res.json(data);
+  res.json({ message: text });
 });
 
 module.exports = app;

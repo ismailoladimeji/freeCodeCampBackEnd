@@ -1,6 +1,7 @@
 let express = require("express");
 let app = express();
 require("dotenv").config();
+const router = express.Router();
 
 // this send a file
 app.get("/", (req, res) => {
@@ -22,7 +23,7 @@ app.get("/json", (req, res) => {
   }
 });
 
-app.use((req, res, next) => {
+router.use((req, res, next) => {
   console.log(`${req.method} ${rew.path} - ${req.ip}`);
   return next();
 });

@@ -22,9 +22,9 @@ app.get("/json", (req, res) => {
   }
 });
 
-app.use("/", (req, res, next) => {
-  console.log(`${req.method} ${rew.path} - ${req.ip}`)
-  return next()
-})
+app.use((req, res, next) => {
+  console.log(`${req.method} ${rew.path} - ${req.ip}`);
+  return next();
+});
 
 module.exports = app;

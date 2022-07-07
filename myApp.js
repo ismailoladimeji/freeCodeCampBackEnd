@@ -1,8 +1,12 @@
 let express = require("express");
 let app = express();
 require("dotenv").config();
-const router = express.Router();
 
+
+app.use((req, res, next) => {
+  console.log(`${req.method} ${rew.path} - ${req.ip}`);
+  return next();
+});
 // this send a file
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
@@ -21,11 +25,6 @@ app.get("/json", (req, res) => {
   } else {
     res.json({ message: text });
   }
-});
-
-router.use((req, res, next) => {
-  console.log(`${req.method} ${rew.path} - ${req.ip}`);
-  return next();
 });
 
 module.exports = app;
